@@ -10,7 +10,7 @@ def show_loading_message():
 def download_audio_process():
     try:
         url = url_entry.get()
-        yt.download_audio(url)
+        yt.check_download(url)
         status_label.config(text="Download complete!")
     except Exception as e:
         status_label.config(text="An error occurred. Please check the URL and try again.")
